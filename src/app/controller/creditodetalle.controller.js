@@ -24,8 +24,8 @@ exports.create=(req, res) =>{
       const _Obj = {
         fecha: req.body.fecha,
         valor: req.body.valor,
-        tipomovimientoid: req.body.tipomovimientoid,
-        creditoid:req.body.creditoid
+        tipomovimientoId: req.body.tipomovimientoId,
+        creditoId:req.body.creditoId
           
       }
 
@@ -69,9 +69,9 @@ exports.findOne = (req, res) => {
   };
 
 exports.findOneCreditoId = (req, res) => {
-  const creditoid = req.params.creditoid;
-
-  Obj.findAll({where:{creditoid:creditoid},include:[{model:TipoMovimiento}]})
+  const creditoId = req.params.creditoId;
+  
+  Obj.findAll({where:{creditoId:creditoId},include:[{model:TipoMovimiento}]})
     .then(data => {
       res.json(data);
     })
@@ -83,9 +83,9 @@ exports.findOneCreditoId = (req, res) => {
 };
 
   exports.findOneTipoMovimientoId = (req, res) => {
-    const tipomovimientoid = req.params.tipomovimientoid;
+    const tipomovimientoId = req.params.tipomovimientoId;
   
-    Obj.findAll({where:{tipomovimientoid:tipomovimientoid},include:[{model:TipoMovimiento}]})
+    Obj.findAll({where:{tipomovimientoId:tipomovimientoId},include:[{model:TipoMovimiento}]})
       .then(data => {
         res.json(data);
       })

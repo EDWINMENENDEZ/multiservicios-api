@@ -20,11 +20,11 @@ exports.create=(req, res) =>{
 
       const _Obj = {
           fecha: req.body.fecha,
-          tipomovimientoid: req.body.tipomovimientoid,
-          tipopagoid: req.body.tipopagoid,
-          clienteid: req.body.clienteid,
-          proveedorid: req.body.proveedorid,
-          usuarioid:req.body.usuarioid
+          tipomovimientoId: req.body.tipomovimientoId,
+          tipopagoId: req.body.tipopagoId,
+          clienteId: req.body.clienteId,
+          proveedorId: req.body.proveedorId,
+          usuarioId:req.body.usuarioId
       }
 
       Obj.create(_Obj)
@@ -67,9 +67,9 @@ exports.findOne = (req, res) => {
   };
 
   exports.findOneClienteId = (req, res) => {
-    const clienteid = req.params.clienteid;
+    const clienteId = req.params.clienteId;
   
-    Obj.findAll({where:{clienteid:clienteid},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
+    Obj.findAll({where:{clienteId:clienteId},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
       .then(data => {
         res.json(data);
       })
@@ -82,9 +82,9 @@ exports.findOne = (req, res) => {
 
 
   exports.findOneProveedorId = (req, res) => {
-    const proveedorid = req.params.proveedorid;
+    const proveedorId = req.params.proveedorId;
   
-    Obj.findAll({where:{proveedorid:proveedorid},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
+    Obj.findAll({where:{proveedorId:proveedorId},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
       .then(data => {
         res.json(data);
       })
@@ -96,9 +96,9 @@ exports.findOne = (req, res) => {
   };
 
   exports.findOneTipoPagoId = (req, res) => {
-    const tipopagoid = req.params.tipopagoid;
+    const tipopagoId = req.params.tipopagoId;
   
-    Obj.findAll({where:{tipopagoid:tipopagoid},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
+    Obj.findAll({where:{tipopagoId:tipopagoId},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
       .then(data => {
         res.json(data);
       })
@@ -111,9 +111,9 @@ exports.findOne = (req, res) => {
 
 
   exports.findOneTipoMovimientoId = (req, res) => {
-    const tipomovimientoid = req.params.tipomovimientoid;
+    const tipomovimientoId = req.params.tipomovimientoId;
   
-    Obj.findAll({where:{tipomovimientoid:tipomovimientoid},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
+    Obj.findAll({where:{tipomovimientoId:tipomovimientoId},include:[{model:Usuario},{model:TipoMovimiento},{model:TipoPago},{model:Cliente},{model:Proveedor}]})
       .then(data => {
         res.json(data);
       })

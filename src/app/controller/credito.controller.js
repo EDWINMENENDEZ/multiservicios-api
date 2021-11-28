@@ -59,6 +59,7 @@ exports.findAll =  (req, res) => {
           });
   };
 
+
 exports.findOne = (req, res) => {
     const id = req.params.id;
   
@@ -87,7 +88,6 @@ exports.findOne = (req, res) => {
       });
   };
   
-
 
   exports.findOneTipoCreditoId = (req, res) => {
     const tipocreditoId = req.params.tipocreditoId;

@@ -26,8 +26,8 @@ exports.create=(req, res) =>{
       const _Obj = {
           cantidad: req.body.cantidad,
           valor: req.body.valor,
-          articuloid: req.body.articuloid,
-          movimientoid: req.body.movimientoid
+          articuloId: req.body.articuloId,
+          movimientoId: req.body.movimientoId
       }
 
       Obj.create(_Obj)
@@ -70,9 +70,9 @@ exports.findOne = (req, res) => {
   };
 
   exports.findOneMovimientoId = (req, res) => {
-    const movimientoid = req.params.movimientoid;
+    const movimientoId = req.params.movimientoId;
   
-    Obj.findAll({where:{movimientoid:movimientoid},include:[{model:Articulo},{model:Movimiento}]})
+    Obj.findAll({where:{movimientoId:movimientoId},include:[{model:Articulo},{model:Movimiento}]})
       .then(data => {
         res.json(data);
       })

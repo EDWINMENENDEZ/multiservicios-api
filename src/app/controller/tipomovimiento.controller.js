@@ -58,7 +58,7 @@ exports.findAll =  (req, res) => {
   };
 
   exports.findAllCredito =  (req, res) => {
-    Obj.findAll({where:{credito:false}})
+    Obj.findAll({where:{credito:true}})
           .then(data => {
             res.json(data);
           })

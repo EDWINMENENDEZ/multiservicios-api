@@ -60,10 +60,10 @@ exports.create=(req, res) =>{
           nombre: req.body.nombre,
           apellido: req.body.apellido,
           usuario: req.body.usuario,
-          password: req.body.contraseña,
+          password: req.body.password,
           telefono: req.body.telefono,
           direccion: req.body.direccion,
-          tipousuarioid: req.body.tipousuarioid
+          tipousuarioId: req.body.tipousuarioId
       }
 
       Obj.create(_Obj)

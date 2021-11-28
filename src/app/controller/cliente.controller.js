@@ -44,7 +44,7 @@ exports.create=(req, res) =>{
           telefono: req.body.telefono,
           direccion: req.body.direccion,
           correo: req.body.correo,
-          tipoclienteid: req.body.tipoclienteid
+          tipoclienteId: req.body.tipoclienteId
       }
 
       Obj.create(_Obj)

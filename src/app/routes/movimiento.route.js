@@ -7,10 +7,10 @@ module.exports = router =>{
     api.post("/",ensureToken, _Route.create);
     api.get("/",ensureToken,_Route.findAll);
     api.get("/:id",ensureToken,_Route.findOne);
-    api.get("/:clienteid",ensureToken,_Route.findOneClienteId);
-    api.get("/:proveedorid",ensureToken,_Route.findOneProveedorId);
-    api.get("/:tipomovimientoid",ensureToken,_Route.findOneTipoMovimientoId);
-    api.get("/:tipopagoid",ensureToken,_Route.findOneTipoPagoId);
+    api.get("/cliente/:clienteId",ensureToken,_Route.findOneClienteId);
+    api.get("/proveedor/:proveedorId",ensureToken,_Route.findOneProveedorId);
+    api.get("/tipomovimiento/:tipomovimientoId",ensureToken,_Route.findOneTipoMovimientoId);
+    api.get("/tipopago/:tipopagoId",ensureToken,_Route.findOneTipoPagoId);
     
     api.put("/:id",ensureToken,_Route.update);
     api.delete("/:id",ensureToken,_Route.delete);

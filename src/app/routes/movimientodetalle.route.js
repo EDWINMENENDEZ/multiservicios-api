@@ -7,7 +7,7 @@ module.exports = router =>{
     api.post("/",ensureToken, _Route.create);
     api.get("/",ensureToken,_Route.findAll);
     api.get("/:id",ensureToken,_Route.findOne);
-    api.get("/:movimientoid",ensureToken,_Route.findOneMovimientoId);
+    api.get("/movimiento/:movimientoId",ensureToken,_Route.findOneMovimientoId);
     api.put("/:id",ensureToken,_Route.update);
     api.delete("/:id",ensureToken,_Route.delete);
     
