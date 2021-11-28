@@ -2,13 +2,13 @@
 const Sequelize = require("sequelize");
 
 //CADENAS DE CONEXION PARA LA BASE DE DATOS
-/*
+///*
 //DB Heroku
 const sequelize = new Sequelize({
-  database: "d9j5v3466ida1j",
-  username: "utpedahkltjljj",
-  password: "6d47756a1bbf15d8b61d91783ee73982504555302fe4f0df46f0aa9cd3396c63",
-  host: "ec2-18-209-143-227.compute-1.amazonaws.com",
+  database: "d5fr06jg2qio6l",
+  username: "noogsttcgzcxye",
+  password: "6df9039a7f94eea9fcb15192c3a11dfadda968627b4dc6bc81b1ac136804ebbd",
+  host: "ec2-18-213-133-45.compute-1.amazonaws.com",
   port: 5432,
   dialect: "postgres",
   dialectOptions: {
@@ -18,13 +18,13 @@ const sequelize = new Sequelize({
     }
   }
 });
-*/
-///*
+//*/
+/*
 //Local
 const sequelize = new Sequelize({
   database: "dbmultiservicios",
   username: "postgres",
-  password: "1234",
+  password: "123",
   host: "localhost",
   port: 5432,
   dialect: "postgres",
@@ -36,7 +36,7 @@ const sequelize = new Sequelize({
         idle:10000
   }
 });
-//*/
+*/
 
 
 const db = {};
